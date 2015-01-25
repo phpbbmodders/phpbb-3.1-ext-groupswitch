@@ -1,0 +1,31 @@
+{
+	"name": "phpbbmodders/groupswitches",
+	"type": "phpbb-extension",
+	"description": "phpBB 3.1 extension to allow the use of group switches in HTML files",
+	"homepage": "https://github.com/phpbbmodders/groupswitches",
+	"version": "1.0.0",
+	"time": "2015-01-25",
+	"keywords": ["phpbb", "extension", "group switches"],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Rich McGirr",
+			"homepage": "http://phpbbmodders.net",
+			"email": "rmcgirr83@phpbbmodders.net",
+			"role": "Lead Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": "~1.0"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "Group Switches",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+		}
+	}
+}
