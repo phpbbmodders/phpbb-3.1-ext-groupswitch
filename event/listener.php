@@ -46,16 +46,16 @@ class listener implements EventSubscriberInterface
 
 	public function main($event)
 	{
-        if (!function_exists('group_memberships') )
-        {
-            include($this->root_path . 'includes/functions_user.'.$this->php_ext);
-        }
-        $groups = group_memberships(false,$this->user->data['user_id']);
-        foreach ($groups as $grouprec)
-        {
-            $this->template->assign_vars(array(
+		if (!function_exists('group_memberships'))
+		{
+			include($this->root_path . 'includes/functions_user.'.$this->php_ext);
+		}
+		$groups = group_memberships(false,$this->user->data['user_id']);
+		foreach ($groups as $grouprec)
+		{
+			$this->template->assign_vars(array(
 				'S_GROUP_' . $grouprec['group_id'] => true
-            ));
-        }
+			));
+		}
 	}
 }

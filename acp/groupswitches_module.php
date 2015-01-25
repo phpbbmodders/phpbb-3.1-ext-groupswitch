@@ -45,6 +45,6 @@ class groupswitches_module
 
 		$template->assign_vars(array(
 			'L_GROUP_SWITCHES_VERSION' => sprintf($user->lang['GROUP_SWITCHES_VERSION'], $config['groupswitches_version']),
-		));	
+		));
 	}
 }
