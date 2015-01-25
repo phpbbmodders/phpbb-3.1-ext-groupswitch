@@ -5,7 +5,7 @@ phpBB 3.1 extension to allow the use of group switches in HTML files.
 
 
 
-[![Build Status](https://travis-ci.org/phpbbmodders/phpbb-3.1-ext-groupswitch.svg)](https://travis-ci.org/phpbbmodders/phpbb-3.1-ext-groupswitch)
+[![Build Status](https://travis-ci.org/phpbbmodders/phpbb-3.1-ext-groupswitches.svg)](https://travis-ci.org/phpbbmodders/phpbb-3.1-ext-groupswitches)
 ## Installation
 
 ### 1. clone
@@ -13,7 +13,7 @@ Clone (or download and move) the repository into the folder phpBB3/ext/phpbbmodd
 
 ```
 cd phpBB3
-git clone https://github.com/phpbbmodders/phpbb-3.1-ext-groupswitch.git ext/phpbbmodders/groupswitches
+git clone https://github.com/phpbbmodders/phpbb-3.1-ext-groupswitches.git ext/phpbbmodders/groupswitches
 ```
 
 ### 2. activate
