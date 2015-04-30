@@ -51,11 +51,14 @@ class listener implements EventSubscriberInterface
 			include($this->root_path . 'includes/functions_user.'.$this->php_ext);
 		}
 		$groups = group_memberships(false,$this->user->data['user_id']);
-		foreach ($groups as $grouprec)
+		if (sizeof($groups))
 		{
-			$this->template->assign_vars(array(
-				'S_GROUP_' . $grouprec['group_id'] => true
-			));
+			foreach ($groups as $grouprec)
+			{
+				$this->template->assign_vars(array(
+					'S_GROUP_' . $grouprec['group_id'] => true
+				));
+			}
 		}
 	}
 }
