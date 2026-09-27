@@ -3,9 +3,6 @@ phpbb-3.1-ext-groupswitches
 
 phpBB 3.1 extension to allow the use of group switches in HTML files.
 
-
-
-[![Build Status](https://travis-ci.org/phpbbmodders/phpbb-3.1-ext-groupswitch.svg)](https://travis-ci.org/phpbbmodders/phpbb-3.1-ext-groupswitch)
 ## Installation
 
 ### 1. clone
