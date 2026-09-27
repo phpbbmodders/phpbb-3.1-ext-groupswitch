@@ -1,7 +1,7 @@
 phpbb-3.1-ext-groupswitches
 =========================
 
-phpBB 3.1 extension to allow the use of group switches in HTML files.
+phpBB extension to allow the use of group switches in HTML files.
 
 ## Installation
 
