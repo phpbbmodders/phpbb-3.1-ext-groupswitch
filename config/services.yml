@@ -2,10 +2,10 @@ services:
     phpbbmodders.groupswitches.listener:
         class: phpbbmodders\groupswitches\event\listener
         arguments:
-            - @template
-            - @user
-            - %core.root_path%
-            - %core.php_ext%
+            - '@template'
+            - '@user'
+            - '%core.root_path%'
+            - '%core.php_ext%'
         tags:
             - { name: event.listener }
 
