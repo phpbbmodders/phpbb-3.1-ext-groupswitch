@@ -1,26 +1,53 @@
-phpbb-3.1-ext-groupswitches
-=========================
+# Group Switches
 
-phpBB extension to allow the use of group switches in HTML files.
+[![Tests](https://github.com/phpbbmodders/phpbb-3.1-ext-groupswitch/actions/workflows/tests.yml/badge.svg)](https://github.com/phpbbmodders/phpbb-3.1-ext-groupswitch/actions/workflows/tests.yml) [![Lint](https://github.com/phpbbmodders/phpbb-3.1-ext-groupswitch/actions/workflows/lint.yml/badge.svg)](https://github.com/phpbbmodders/phpbb-3.1-ext-groupswitch/actions/workflows/lint.yml)
+
+Lets style templates show or hide content based on the viewer's groups.
+
+## Features
+
+- Sets a template switch `S_GROUP_<id>` for every group the current user is in, on every page.
+- An ACP page lists your groups with their IDs.
+
+## Requirements
+
+- phpBB 3.3.19 or later
+- PHP 7.4 or later
 
 ## Installation
 
-### 1. clone
-Clone (or download and move) the repository into the folder phpBB3/ext/phpbbmodders/groupswitches:
+1. Copy the extension to `/ext/phpbbmodders/groupswitches`
+2. In the Administration Control Panel, go to **Customise → Manage extensions**
+3. Enable the **Group Switches** extension
+4. Find your group IDs under **ACP → Users and Groups → Group Switches**
 
+## Usage
+
+Put the content in a template event file inside the extension, using the group's ID from the ACP page. For example, `styles/all/template/event/overall_header_navbar_before.html`:
+
+```twig
+{% if S_GROUP_5 %}
+	<div class="rules">Only members of group 5 see this (Administrators, on a default install).</div>
+{% endif %}
 ```
-cd phpBB3
-git clone https://github.com/phpbbmodders/phpbb-3.1-ext-groupswitch.git ext/phpbbmodders/groupswitches
-```
 
-### 2. activate
-Go to admin panel -> tab customise -> Manage extensions -> enable Group Switches
+Use `styles/all/` for every style, or a style's own folder (such as `styles/prosilver/`) for just that style, then purge the board cache. The template events you can use are listed in phpBB's [event documentation](https://area51.phpbb.com/docs/dev/3.3.x/extensions/events_list.html).
 
-### 3. use
-To use this extension you should know the template events that are available for you.  You can find these template events [here](https://wiki.phpbb.com/Event_List#Template_Events) toward the bottom of the page.
+## Contributing
 
-Once you determine the template event you want to use, simply make a new template event html file with the code you want for the group switch to display.  An example can be found [here](https://www.phpbb.com/support/docs/en/3.0/kb/article/creating-group-template-switches/) you do not need the edits to the core PHP phpBB files.
+Contributions are welcome!
 
-Directories have been created but unpopulated in the extensions directory where you can add your html file and it will be automagically included into the forums html files (use the "all" directory if you want it displayed on every template or prosilver or subsilver if you only want it to display on those styles).  Simply add your html file into the event directory of whichever style.
+- **Bug reports**: [Open an issue](https://github.com/phpbbmodders/phpbb-3.1-ext-groupswitch/issues).
+- **Everything else** (questions, feature requests, ideas, general discussion): [Use Discussions](https://github.com/orgs/phpbbmodders/discussions), or the [community forum](https://www.phpbbmodders.com/community/).
+- Pull requests are welcome for bug fixes or discussed features.
 
-To achieve a list of numbers that are associated with your groups visit the user and groups tab and click on the Group Switches link.
+## Acknowledgments
+
+- Original extension by Rich McGirr ([RMcGirr83](https://github.com/rmcgirr83)).
+- Code review, bug fixes, and documentation assisted by [Claude](https://www.anthropic.com/claude).
+
+## License
+
+This extension is licensed under the **GNU General Public License v2.0**.
+
+See [license.txt](license.txt) for more information.
