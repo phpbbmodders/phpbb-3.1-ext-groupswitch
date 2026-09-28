@@ -1,7 +1,7 @@
 {
 	"name": "phpbbmodders/groupswitches",
 	"type": "phpbb-extension",
-	"description": "phpBB 3.1 extension to allow the use of group switches in HTML files",
+	"description": "Lets style templates show or hide content based on the viewer's groups.",
 	"homepage": "https://www.phpbbmodders.com/",
 	"version": "1.0.0",
 	"time": "2015-01-25",
