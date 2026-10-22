@@ -40,5 +40,5 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, [
-	'GROUPSWITCHES_NOT_ENABLEABLE'	=> 'Group Switches could not be enabled. The minimum requirements of phpBB 3.3.19 and/or PHP 7.4.0 were not satisfied.',
+	'GROUPSWITCHES_NOT_ENABLEABLE'	=> 'Group Switches could not be enabled. The minimum requirements of phpBB 3.3.19 and/or PHP 8.3.36 were not satisfied.',
 ]);
